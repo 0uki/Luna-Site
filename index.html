@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Luna Bot</title>
+        <link rel="stylesheet" type="text/css" href="style.css">
+    </head>
+    <body>
+        <header>
+            <a href="#" class="logo">Luna Bot</a>
+            <ul>
+                <li><a href="#" class="active">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Work</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </header>
+        <section>
+            <img src="stars.png" id="stars">
+            <img src="moon.png" id="moon">
+            <img src="mountains_behind.png" id="mountains_behind">
+            <h2 id="text">Luna Bot</h2>
+            <a href="#sec" id="btn">More About</a>
+            <img src="mountains_front.png" id="mountains_front">
+        </section>
+        <div class="sec" id="sec">
+            <h2>More About</h2>
+            <p>Многофункциональный бот для прослушивания музыки. Наш бот имеет большое количество настроек и команд, которые облегчают работу с ним. 
+            Звук перед воспроизведением проходит разностороннюю обработку от шумов и помех. 
+            Удобный интерфейс поиска треков позволит вам не искать точное название и исполнителя, вместо этого вы сможете найти трек, помня лишь несколько близкое к названию или исполнителю. 
+            Не хватает баса? Это можно исправить с помощью функции «bassboost»! Понравился трек? Сохраните его себе в личку с помощью всего одной команды! 
+            Вы все время играете один и тот же список треков? Используйте «loopqueue», чтобы зациклить всю очередь! 
+            Будем рады вашим отзывам, предложениям и отчетам о работе нашего бота.
+            <br>
+            <br>
+            Многофункциональный бот для прослушивания музыки.</p>
+                <br>
+                <p>Опиание функционала</p>
+                <h1>
+     
+                </h1>
+        </div>
+
+        <script>
+            let stars = document.getElementById('stars');
+            let moon = document.getElementById('moon');
+            let mountains_behind = document.getElementById('mountains_behind');
+            let text = document.getElementById('text');
+            let btn = document.getElementById('btn');
+            let mountains_front = document.getElementById('mountains_front');
+            let header = document.querySelector('header');
+
+            window.addEventListener('scroll', function(){
+                let value = window.scrollY;
+                stars.style.left = value * 0.50 + "px";
+                moon.style.top = value * 1.05 + "px";
+                mountains_behind.style.top = value * 0.5 + "px";
+                mountains_front.style.top = value * 0 + "px";
+                text.style.marginRight = value * 4 + "px";
+                text.style.marginTop = value * 1.5 + "px";
+                btn.style.marginTop = value * 1.5 + "px";
+                header.style.top = value * 0.5 + 'px';
+            })
+        </script>
+    </body>
+</html>
